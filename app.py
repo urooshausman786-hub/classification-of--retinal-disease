@@ -17,6 +17,31 @@ st.set_page_config(
 # -----------------------------
 st.markdown("""
 <style>
+/* Gradient background for whole app */
+.stApp {
+    background: linear-gradient(to bottom right, #36D1DC, #5B86E5);
+    color: #ffffff; /* Default text color */
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Watermark background image */
+.stApp::before {
+    content: "";
+    background: url('https://i.imgur.com/1G1uV4Y.png') no-repeat center;
+    background-size: 200px 200px;  /* Adjust size */
+    opacity: 0.05;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
 /* Gradient header */
 h1 {
     background: linear-gradient(90deg, #36D1DC, #5B86E5);
@@ -26,35 +51,43 @@ h1 {
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 0;
+    position: relative;
+    z-index: 1;
 }
 
 /* Subtitle */
 h3 {
-    color: #ff6347;
+    color: #ffd700;  /* Golden subtitle */
     text-align: center;
     margin-top: 0;
     font-weight: 500;
+    position: relative;
+    z-index: 1;
 }
 
 /* File uploader */
 .css-1v0mbdj.edgvbvh3 {
-    border: 2px dashed #5B86E5;
+    border: 2px dashed #ffffff;
     border-radius: 10px;
     padding: 20px;
-    background-color: #f0f8ff;
-}
-
-/* Center app */
-.stApp {
-    max-width: 900px;
-    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1); /* semi-transparent */
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
 }
 
 /* Prediction result */
 .prediction {
     font-size: 24px;
     font-weight: bold;
-    color: #2E8B57;
+    color: #ffff00;  /* Bright yellow for emphasis */
+    position: relative;
+    z-index: 1;
+}
+
+/* Adjust progress bar color */
+.stProgress > div > div > div {
+    background-color: #ffd700 !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -69,7 +102,7 @@ st.markdown("<h3>Upload a retinal image to detect possible eye diseases using CN
 # File uploader
 # -----------------------------
 uploaded_file = st.file_uploader(
-    "📤 Drag & drop a retinal image here or click to browse (JPG, PNG, max 200MB)",
+    "📤 Drag & drop a retinal image here or click to browse (JPG, PNG, JPEG)",
     type=["jpg", "jpeg", "png"]
 )
 
