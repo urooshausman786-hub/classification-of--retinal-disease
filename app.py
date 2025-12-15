@@ -13,13 +13,13 @@ st.set_page_config(
 )
 
 # -----------------------------
-# Custom CSS for bright/pastel theme
+# Custom CSS for bright/pastel theme with purple header
 # -----------------------------
 st.markdown("""
 <style>
 /* Bright gradient background */
 .stApp {
-    background: linear-gradient(to bottom, #ffffff, #e0f7fa); /* White to light cyan */
+    background: linear-gradient(to bottom, #ffffff, #f3e8ff); /* White to very light purple */
     color: #1e293b;
     max-width: 900px;
     margin: auto;
@@ -29,7 +29,7 @@ st.markdown("""
 
 /* Header */
 h1 {
-    color: #2563eb; /* Bright blue */
+    color: #7c3aed; /* shade of purple */
     text-align: center;
     font-size: 50px;
     font-weight: 700;
@@ -38,7 +38,7 @@ h1 {
 
 /* Subtitle */
 h3 {
-    color: #22d3ee; /* Cyan */
+    color: #d8b4fe; /* light purple / magenta */
     text-align: center;
     font-size: 22px;
     font-weight: 500;
@@ -48,7 +48,7 @@ h3 {
 
 /* File uploader */
 .css-1v0mbdj.edgvbvh3 {
-    border: 2px dashed #60a5fa; /* pastel blue dashed border */
+    border: 2px dashed #c084fc; /* pastel purple dashed border */
     border-radius: 12px;
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -76,14 +76,14 @@ h3 {
 
 /* Confidence progress bar */
 .stProgress > div > div > div {
-    background-color: #3b82f6 !important; /* bright blue */
+    background-color: #a78bfa !important; /* purple progress bar */
 }
 
 /* Info box */
 .stInfo {
     font-size: 18px;
-    background-color: #cffafe !important; /* pastel cyan */
-    color: #06b6d4 !important;
+    background-color: #ede9fe !important; /* pastel light purple */
+    color: #7c3aed !important;
     border-radius: 8px;
     padding: 10px;
 }
