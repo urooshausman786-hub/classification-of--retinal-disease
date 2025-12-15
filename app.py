@@ -13,14 +13,14 @@ st.set_page_config(
 )
 
 # -----------------------------
-# Custom CSS for bright, clean UI
+# Custom CSS for bright/pastel theme
 # -----------------------------
 st.markdown("""
 <style>
-/* Bright background */
+/* Bright gradient background */
 .stApp {
-    background: linear-gradient(to bottom, #ffffff, #e0f2fe); /* White to light sky blue */
-    color: #1e293b; /* Dark text for readability */
+    background: linear-gradient(to bottom, #ffffff, #e0f7fa); /* White to light cyan */
+    color: #1e293b;
     max-width: 900px;
     margin: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -29,7 +29,7 @@ st.markdown("""
 
 /* Header */
 h1 {
-    color: #0c4a6e; /* Deep blue */
+    color: #2563eb; /* Bright blue */
     text-align: center;
     font-size: 50px;
     font-weight: 700;
@@ -38,7 +38,7 @@ h1 {
 
 /* Subtitle */
 h3 {
-    color: #1e40af; /* Medium blue */
+    color: #22d3ee; /* Cyan */
     text-align: center;
     font-size: 22px;
     font-weight: 500;
@@ -48,7 +48,7 @@ h3 {
 
 /* File uploader */
 .css-1v0mbdj.edgvbvh3 {
-    border: 2px dashed #60a5fa;
+    border: 2px dashed #60a5fa; /* pastel blue dashed border */
     border-radius: 12px;
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -63,27 +63,27 @@ h3 {
 
 /* Prediction result card */
 .prediction-card {
-    background-color: #fef3c7; /* Soft yellow */
+    background-color: #fef9c3; /* soft yellow */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
     font-size: 24px;
     font-weight: 600;
-    color: #b45309; /* Dark yellow/brown for contrast */
+    color: #f59e0b; /* bright amber/yellow */
     margin-top: 20px;
 }
 
 /* Confidence progress bar */
 .stProgress > div > div > div {
-    background-color: #3b82f6 !important; /* Bright blue */
+    background-color: #3b82f6 !important; /* bright blue */
 }
 
 /* Info box */
 .stInfo {
     font-size: 18px;
-    background-color: #dbeafe !important; /* Light blue */
-    color: #1e40af !important;
+    background-color: #cffafe !important; /* pastel cyan */
+    color: #06b6d4 !important;
     border-radius: 8px;
     padding: 10px;
 }
