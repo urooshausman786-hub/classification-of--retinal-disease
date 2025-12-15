@@ -1,28 +1,29 @@
-# classification-of-retinal-disease
+# Classification-of-Retinal-Disease
 Deep learning-based retinal disease classification using CNN.
 
 **Features**
-Compares performance of multiple pretrained models
-Implements Grad-CAM visualization for explainability
-Includes accuracy/loss comparison graphs
-Supports efficient training using TensorFlow/Keras
+1.Compares performance of multiple pretrained models.
+2.Implements Grad-CAM visualization for explainability.
+3.Includes accuracy/loss comparison graphs.
+4.Supports efficient training using TensorFlow/Keras.
 
 **Models Compared**
-EfficientNet-B0
-MobileNet-V2
-VGG16
-DenseNet121
+1.EfficientNet-B0
+2.MobileNet-V2
+3.VGG16
+4.DenseNet121
 
 **Technologies Used**
-Python
-TensorFlow / Keras
-NumPy, Pandas
-Matplotlib, Seaborn
-OpenCV
-scikit-learn
+1.Python
+2.TensorFlow / Keras
+3.NumPy, Pandas
+4.Matplotlib, Seaborn
+5.OpenCV
+6.scikit-learn
 
 **Dataset used**
 https://www.kaggle.com/datasets/gunavenkatdoddi/eye-diseases-classification/code
 
 **Author**
-Uroosha Usman MSc Computer Science, Lucknow University
+Uroosha Usman
+MSc Computer Science, Lucknow University
