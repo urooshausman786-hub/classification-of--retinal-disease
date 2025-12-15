@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # -----------------------------
-# Custom CSS for bright/pastel theme with purple header
+# Custom CSS for purple theme
 # -----------------------------
 st.markdown("""
 <style>
@@ -28,8 +28,8 @@ st.markdown("""
 }
 
 /* Header */
-h1 {
-    color: #7c3aed; /* shade of purple */
+.custom-header {
+    color: #7c3aed; /* purple */
     text-align: center;
     font-size: 50px;
     font-weight: 700;
@@ -37,7 +37,7 @@ h1 {
 }
 
 /* Subtitle */
-h3 {
+.custom-subtitle {
     color: #d8b4fe; /* light purple / magenta */
     text-align: center;
     font-size: 22px;
@@ -61,22 +61,22 @@ h3 {
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-/* Prediction result card */
+/* Prediction result card (purple-themed) */
 .prediction-card {
-    background-color: #fef9c3; /* soft yellow */
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc); /* soft purple to blue gradient */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
     font-size: 24px;
     font-weight: 600;
-    color: #f59e0b; /* bright amber/yellow */
+    color: #1e3a8a; /* dark blue text for contrast */
     margin-top: 20px;
 }
 
 /* Confidence progress bar */
 .stProgress > div > div > div {
-    background-color: #a78bfa !important; /* purple progress bar */
+    background-color: #7c3aed !important; /* purple */
 }
 
 /* Info box */
@@ -91,10 +91,10 @@ h3 {
 """, unsafe_allow_html=True)
 
 # -----------------------------
-# Header
+# Header & Subtitle in HTML to apply CSS
 # -----------------------------
-st.title("🩺 Retinal Disease Classification System")
-st.markdown("<h3>Upload a retinal image to detect possible eye diseases using CNN (MobileNetV2)</h3>", unsafe_allow_html=True)
+st.markdown('<div class="custom-header">🩺 Retinal Disease Classification System</div>', unsafe_allow_html=True)
+st.markdown('<div class="custom-subtitle">Upload a retinal image to detect possible eye diseases using CNN (MobileNetV2)</div>', unsafe_allow_html=True)
 
 # -----------------------------
 # File uploader
@@ -134,7 +134,7 @@ if uploaded_file:
     pred_class = np.argmax(output_data)
     confidence = output_data[pred_class]
 
-    # Display results in a card
+    # Display results in a purple gradient card
     st.markdown(f"""
         <div class="prediction-card">
             ✅ Predicted Disease: <b>{classes[pred_class]}</b><br>
